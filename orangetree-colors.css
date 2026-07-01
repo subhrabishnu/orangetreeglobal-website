@@ -1,0 +1,57 @@
+:root {
+  /* ===== OrangeTree Brand — Color Ramp ===== */
+
+  /* Brand core */
+  --ot-orange: #F36621;
+  --ot-green: #1A7A30;
+  --ot-black: #000000;
+  --ot-cream: #FBF6EC;
+
+  /* Orange ramp */
+  --ot-orange-50: #ffedde;
+  --ot-orange-100: #ffddc5;
+  --ot-orange-200: #ffc29f;
+  --ot-orange-300: #ffa172;
+  --ot-orange-400: #ff7e43;
+  --ot-orange-500: #F36621;  /* brand */
+  --ot-orange-600: #d24700;
+  --ot-orange-700: #ae3100;
+  --ot-orange-800: #8d2400;
+  --ot-orange-900: #6d1b00;
+  --ot-orange-950: #490f00;
+
+  /* Green ramp */
+  --ot-green-50: #e8fee9;
+  --ot-green-100: #d5f8d7;
+  --ot-green-200: #b7eabb;
+  --ot-green-300: #93d899;
+  --ot-green-400: #6ec178;
+  --ot-green-500: #50a95d;
+  --ot-green-600: #379146;
+  --ot-green-700: #1A7A30;  /* brand */
+  --ot-green-800: #175e26;
+  --ot-green-900: #11481c;
+  --ot-green-950: #082f10;
+
+  /* Neutral ramp (warm) */
+  --ot-neutral-50: #fef9f7;
+  --ot-neutral-100: #f7f2f0;
+  --ot-neutral-200: #eae5e3;
+  --ot-neutral-300: #d9d5d3;
+  --ot-neutral-400: #b8b3b1;
+  --ot-neutral-500: #96918f;
+  --ot-neutral-600: #75706f;
+  --ot-neutral-700: #565150;
+  --ot-neutral-800: #3c3837;
+  --ot-neutral-900: #252221;
+  --ot-neutral-950: #13100e;
+
+  /* Semantic aliases */
+  --ot-primary: var(--ot-orange-500);
+  --ot-secondary: var(--ot-green-600);
+  --ot-bg: var(--ot-cream);
+  --ot-surface: #FFFFFF;
+  --ot-text: var(--ot-neutral-900);
+  --ot-text-muted: var(--ot-neutral-600);
+  --ot-border: var(--ot-neutral-200);
+}
