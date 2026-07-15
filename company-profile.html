@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Profile — OrangeTree Global (OrangeTree AI)</title>
+<meta name="description" content="OrangeTree Global (OrangeTree AI): Kolkata-based data science, analytics &amp; AI training and consulting firm, founded 2009. 10,000+ trained, 50+ clients. CIN U74999WB2011PTC164469.">
+<link rel="canonical" href="https://orangetreeglobal.com/company-profile.html">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ---- Company Profile specific styles ---- */
+.info-table-wrap {
+  float: right;
+  margin: 0 0 32px 40px;
+  min-width: 280px;
+  max-width: 340px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.info-table-header {
+  background: var(--ot-neutral-900);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 20px 16px;
+}
+.info-table-header h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.info-table-header p {
+  font-size: 12px;
+  color: var(--ot-neutral-400);
+}
+.info-table-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+.info-stat {
+  padding: 14px 16px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.info-stat:nth-child(even) { border-right: none; }
+.info-stat:nth-child(n+3) { border-bottom: none; }
+.info-stat-num { font-size: 22px; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 3px; }
+.info-stat-label { font-size: 11px; color: var(--text-light); line-height: 1.3; }
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.info-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.info-table td:first-child {
+  font-weight: 700;
+  color: var(--ot-neutral-600);
+  white-space: nowrap;
+  width: 38%;
+}
+.info-table td:last-child { color: var(--text); }
+.info-table tr:last-child td { border-bottom: none; }
+
+.reg-box {
+  background: var(--ot-neutral-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.reg-box strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ot-neutral-500); margin-bottom: 6px; }
+.reg-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.reg-row:last-child { margin-bottom: 0; }
+.reg-label { font-weight: 700; color: var(--ot-neutral-600); }
+.reg-val { font-family: 'JetBrains Mono', monospace; color: var(--text); font-size: 11px; }
+
+/* Article layout */
+.article-body {
+  max-width: 800px;
+}
+.article-body::after { content: ''; display: table; clear: both; }
+.article-lead {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.article-body h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+.article-body h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+.article-body p { font-size: 15px; line-height: 1.8; color: var(--ot-neutral-700); margin-bottom: 16px; }
+
+/* Contents box */
+.toc-box {
+  background: var(--ot-neutral-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  display: inline-block;
+  min-width: 240px;
+}
+.toc-box strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ot-neutral-500);
+  margin-bottom: 12px;
+}
+.toc-box ol {
+  list-style: decimal;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.toc-box ol li a {
+  font-size: 14px;
+  color: var(--orange);
+  font-weight: 500;
+  text-decoration: none;
+}
+.toc-box ol li a:hover { text-decoration: underline; }
+
+/* Data tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.data-table th {
+  background: var(--ot-neutral-900);
+  color: var(--ot-neutral-300);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ot-neutral-700);
+  line-height: 1.5;
+  vertical-align: top;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:nth-child(even) td { background: var(--ot-neutral-50); }
+.data-table td strong { color: var(--text); font-weight: 700; }
+
+/* Timeline (history) */
+.hist-list { list-style: none; padding: 0; }
+.hist-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  padding-bottom: 24px;
+  position: relative;
+}
+.hist-item::before {
+  content: '';
+  position: absolute;
+  left: 26px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.hist-item:last-child::before { display: none; }
+.hist-year-col { text-align: center; padding-top: 2px; }
+.hist-year-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+.hist-content { padding-top: 2px; }
+.hist-content strong { display: block; font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.hist-content span { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+/* References */
+.ref-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: refs;
+}
+.ref-list li {
+  counter-increment: refs;
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+  padding: 8px 0 8px 32px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.ref-list li:last-child { border-bottom: none; }
+.ref-list li::before {
+  content: counter(refs) '.';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--orange);
+}
+.ref-list li a { color: var(--orange); }
+.ref-list li a:hover { text-decoration: underline; }
+
+/* Legal footer strip */
+.legal-strip {
+  background: var(--ot-neutral-100);
+  border-top: 1px solid var(--border);
+  padding: 14px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-light);
+}
+.legal-strip a { color: var(--orange); }
+
+@media (max-width: 768px) {
+  .info-table-wrap { float: none; margin: 0 0 32px 0; max-width: 100%; }
+  .article-body { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="ann-bar">
+  India's MSME AI adoption company. 17 years · Kolkata-based · 10,000+ trained.
+  <a href="contact.html">Work with us</a>
+</div>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-ai.svg" alt="OrangeTree.{ai}" style="height:38px;width:auto;">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="ai-consulting.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="sme-suite.html" class="nav-link">AI SME Suite</a></li>
+        <li class="nav-item"><a href="training.html" class="nav-link">Training</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link nav-active">About</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Free Consultation</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="about.html">About</a> / Company Profile</div>
+    <h1>Company Profile</h1>
+    <p>OrangeTree Global (OrangeTree AI) — Kolkata-based AI training &amp; consulting company. Founded 2009.</p>
+  </div>
+</section>
+
+<!-- Article Body -->
+<section class="section section-bg">
+  <div class="container">
+    <div class="article-body">
+
+      <!-- Infobox -->
+      <div class="info-table-wrap">
+        <div class="info-table-header">
+          <h3>OrangeTree Global</h3>
+          <p>Orangetree Business Solutions Pvt. Ltd.</p>
+        </div>
+        <div class="info-stat-grid" style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);">
+          <div class="info-stat" style="padding:14px 10px;text-align:center;border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
+            <div class="info-stat-num">2009</div>
+            <div class="info-stat-label">Founded<br>Kolkata</div>
+          </div>
+          <div class="info-stat" style="padding:14px 10px;text-align:center;border-bottom:1px solid var(--border);">
+            <div class="info-stat-num">10K+</div>
+            <div class="info-stat-label">Professionals<br>Trained</div>
+          </div>
+          <div class="info-stat" style="padding:14px 10px;text-align:center;border-right:1px solid var(--border);">
+            <div class="info-stat-num">50+</div>
+            <div class="info-stat-label">Corporate<br>Clients</div>
+          </div>
+          <div class="info-stat" style="padding:14px 10px;text-align:center;">
+            <div class="info-stat-num">10</div>
+            <div class="info-stat-label">Live AI Tools<br>for MSMEs</div>
+          </div>
+        </div>
+        <table class="info-table">
+          <tr><td>Type</td><td>Private limited company</td></tr>
+          <tr><td>Industry</td><td>Data science, analytics &amp; AI training and consulting</td></tr>
+          <tr><td>Founded</td><td>2009; Kolkata, India<br><span style="font-size:12px;color:var(--text-light);">(Pvt. Ltd. incorporated 2011)</span></td></tr>
+          <tr><td>Founders</td><td>Subhra Bishnu<br>Priyadarshini Bishnu</td></tr>
+          <tr><td>HQ</td><td>Sector 1, Salt Lake<br>Kolkata 700064, WB, India</td></tr>
+          <tr><td>Areas served</td><td>Kolkata · Mumbai · Pune · Bengaluru · Gurgaon (Delhi-NCR)</td></tr>
+          <tr><td>Services</td><td>AI consulting · AI training · AI SME Suite · Corporate analytics training</td></tr>
+          <tr><td>Website</td><td><a href="https://orangetreeglobal.com" style="color:var(--orange);">orangetreeglobal.com</a></td></tr>
+        </table>
+        <div class="reg-box">
+          <strong>Registration</strong>
+          <div class="reg-row"><span class="reg-label">CIN</span><span class="reg-val">U74999WB2011PTC164469</span></div>
+          <div class="reg-row"><span class="reg-label">GSTIN</span><span class="reg-val">19AABCO4959Q1ZJ</span></div>
+        </div>
+      </div>
+
+      <!-- Lead text -->
+      <p class="article-lead"><strong>OrangeTree Global</strong>, now marketed as <strong>OrangeTree AI</strong>, is an Indian data science, analytics and artificial-intelligence training and consulting company headquartered in Kolkata, West Bengal. Operated by <strong>Orangetree Business Solutions Private Limited</strong>, the company has trained more than 10,000 professionals and served 50+ corporate clients since its founding in 2009.<sup><a href="#r1" style="color:var(--orange);">[1]</a></sup></p>
+
+      <p class="article-lead">Founded as a boutique data analytics training institute, the company built a 17-year track record in data science and analytics before repositioning in 2026 around a single mission: making practical, affordable AI adoption possible for India's 63 million MSMEs. <strong>OrangeTree Global</strong> remains the legal and legacy brand; <strong>OrangeTree AI</strong> (also styled <strong>OrangeTree.{ai}</strong>) is the identity under which the company now takes its consulting practice, AI SME Suite and training programs to market.</p>
+
+      <!-- Table of Contents -->
+      <div class="toc-box">
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#history">History</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#orangetree-ai">Repositioning as OrangeTree AI</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#programs">Training Programs</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#references">References</a></li>
+        </ol>
+      </div>
+
+      <!-- History -->
+      <h2 id="history">History</h2>
+      <p>OrangeTree Global was founded in Kolkata in 2009 as a boutique data analytics training institute, running weekend programs in Excel, SQL and Business Analytics; its first cohort comprised 18 professionals from banking and manufacturing. The business was incorporated as Orangetree Business Solutions Private Limited in 2011, the same year it expanded from Kolkata into Mumbai and Pune.<sup><a href="#r1" style="color:var(--orange);">[1]</a></sup></p>
+
+      <ul class="hist-list">
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2009</span></div>
+          <div class="hist-content"><strong>Founded in Kolkata</strong><span>Launched as a boutique data analytics training institute. First cohort: 18 professionals from banking and manufacturing.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2011</span></div>
+          <div class="hist-content"><strong>Incorporated as Pvt. Ltd. — Multi-City Expansion</strong><span>Registered as Orangetree Business Solutions Private Limited; expanded to four offices — two in Eastern India, one in Mumbai (Malad West) and one in Pune (Aundh).</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2012</span></div>
+          <div class="hist-content"><strong>First Corporate Training Contract</strong><span>Upskilled 60 analysts at a Kolkata-based NBFC in analytics and statistical modeling; expanded curriculum into Python and R.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2015</span></div>
+          <div class="hist-content"><strong>Machine Learning Programs Launched</strong><span>Launched India's early weekend-format ML practitioner programs; reached 500-alumni milestone. Began curriculum partnerships with industry practitioners.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2017</span></div>
+          <div class="hist-content"><strong>Consulting Practice Established</strong><span>Formalized an AI and analytics consulting practice, moving beyond training into building models and analytics systems for BFSI, retail and manufacturing clients.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2019</span></div>
+          <div class="hist-content"><strong>National Reach — 1,000+ Alumni</strong><span>Expanded training reach nationally via online delivery; crossed 1,000 alumni across Kolkata, Mumbai, Bengaluru and Delhi. Launched deep learning and NLP tracks.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2021</span></div>
+          <div class="hist-content"><strong>AI Consulting Scales to 50+ Clients</strong><span>Grew consulting client base to 50+ organizations; delivered production ML systems for fraud detection, demand forecasting and customer analytics across BFSI and retail.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2023</span></div>
+          <div class="hist-content"><strong>GenAI Practice Launch</strong><span>Built a Generative AI practice following the LLM revolution; integrated Claude API and GPT capabilities into client workflows. Began designing AI tools specifically for Indian MSMEs.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2025</span></div>
+          <div class="hist-content"><strong>OrangeTree AI SME Suite — 10 Tools</strong><span>Released 10 ready-to-deploy AI applications for Indian MSMEs spanning operations, compliance, finance, marketing, customer experience and sales.</span></div>
+        </li>
+        <li class="hist-item">
+          <div class="hist-year-col"><span class="hist-year-badge">2026</span></div>
+          <div class="hist-content"><strong>MSME AI Adoption Platform</strong><span>Officially repositioned as India's dedicated MSME AI adoption company, unifying consulting, tooling and training under the <strong>OrangeTree AI</strong> identity.</span></div>
+        </li>
+      </ul>
+
+      <!-- Services -->
+      <h2 id="services">Services</h2>
+      <p>OrangeTree operates across five service lines, with AI consulting and the AI SME Suite forming the growth focus from 2025 onwards.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Service Line</th>
+            <th>Description</th>
+            <th>Typical Clients</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AI Consulting</strong></td>
+            <td>AI-readiness audits, workflow redesign and implementation support — built on outcomes over outputs</td>
+            <td>Indian MSMEs across sectors, incl. QSR and F&amp;B</td>
+          </tr>
+          <tr>
+            <td><strong>AI SME Suite</strong></td>
+            <td>10 ready-to-deploy AI applications covering operations, compliance, finance, marketing, customer experience and sales</td>
+            <td>MSMEs (10–500 employees)</td>
+          </tr>
+          <tr>
+            <td><strong>AI Training</strong></td>
+            <td>Hands-on generative-AI and applied-AI programs, including profession-specific tracks</td>
+            <td>MSME teams, professional services firms</td>
+          </tr>
+          <tr>
+            <td><strong>Data Science &amp; Analytics Training</strong></td>
+            <td>Instructor-led programs in analytics, statistics, machine learning and BI tools — the company's original practice</td>
+            <td>Working professionals, graduates, corporate L&amp;D teams</td>
+          </tr>
+          <tr>
+            <td><strong>Corporate Training</strong></td>
+            <td>Customized upskilling engagements delivered onsite and online</td>
+            <td>Enterprises across India</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Repositioning -->
+      <h2 id="orangetree-ai">Repositioning as OrangeTree AI</h2>
+      <p>In 2026, the company repositioned itself from a data science and analytics training institute into <strong>India's dedicated MSME AI adoption company</strong>, trading under the name <strong>OrangeTree AI</strong> (also styled OrangeTree.{ai}) while retaining Orangetree Business Solutions Private Limited as its legal entity and OrangeTree Global as its founding brand.</p>
+      <p>The repositioning unifies three previously separate strands — consulting, the AI SME Suite, and training — into a single MSME-focused partnership model. The strategic rationale centres on India's 63 million MSMEs, which generate 45% of industrial output and 40% of exports yet have largely been excluded from AI adoption due to cost, complexity, and lack of relevant tooling.</p>
+
+      <!-- Leadership -->
+      <h2 id="leadership">Leadership</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Subhra Bishnu</strong></td>
+            <td>Co-Founder &amp; Director</td>
+            <td>Leads strategy and the AI consulting practice; co-founder of Pulse Data Technologies (Malaysia)</td>
+          </tr>
+          <tr>
+            <td><strong>Priyadarshini Bishnu</strong></td>
+            <td>Co-Founder &amp; Director</td>
+            <td>Leads operations and finance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Training Programs -->
+      <h2 id="programs">Training Programs</h2>
+      <p>OrangeTree's curriculum has evolved from classical analytics (statistics, SQL, visualisation, machine learning) toward applied AI. Current flagship formats include:</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Format</th>
+            <th>Audience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Data Science &amp; Analytics Certification Programs</strong></td>
+            <td>Classroom + online, cohort-based</td>
+            <td>Graduates and working professionals</td>
+          </tr>
+          <tr>
+            <td><strong>Excel + Claude AI Mastery Program</strong></td>
+            <td>Workshop with workbook</td>
+            <td>Business professionals</td>
+          </tr>
+          <tr>
+            <td><strong>Applied AI — Profession-Specific Tracks</strong></td>
+            <td>Instructor-led, hands-on</td>
+            <td>Marketing, finance, operations and consulting professionals</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Locations -->
+      <h2 id="locations">Locations</h2>
+      <p>OrangeTree Global operates out of shared workspaces across Kolkata, Mumbai, Pune, Bengaluru and Gurgaon (Delhi-NCR), supporting both on-site training assignments and online delivery — giving the company a genuinely all-India footprint without the overhead of dedicated offices in every city.</p>
+
+      <!-- References -->
+      <h2 id="references">References</h2>
+      <ol class="ref-list">
+        <li id="r1">Ministry of Corporate Affairs, Government of India. Company master data for Orangetree Business Solutions Private Limited, CIN U74999WB2011PTC164469.</li>
+        <li id="r2">OrangeTree AI. "About / Our Journey." <a href="https://orangetreeglobal.com/about.html">orangetreeglobal.com</a>. Company history, milestones and key figures as published June 2026.</li>
+        <li id="r3">Chowdhury, Titash Roy. "How Priyadarshini and Subhra Bishnu built OrangeTree into a one-crore company." <em>The Economic Times</em>, 7 August 2012. <a href="https://economictimes.indiatimes.com/east/how-priyadarshini-and-subhra-bishnu-built-orangetree-into-a-one-crore-company/articleshow/15387646.cms" target="_blank">economictimes.indiatimes.com</a>.</li>
+      </ol>
+
+    </div><!-- /.article-body -->
+  </div>
+</section>
+
+<!-- Legal Strip -->
+<div class="legal-strip">
+  © Orangetree Business Solutions Private Limited &nbsp;·&nbsp; CIN U74999WB2011PTC164469 &nbsp;·&nbsp; Sector 1, Salt Lake, Kolkata 700064 &nbsp;·&nbsp; <a href="tel:+919830063222">+91 98300 63222</a> &nbsp;·&nbsp; <a href="mailto:info@orangetreeglobal.com">info@orangetreeglobal.com</a>
+</div>
+
+<!-- CTA Band -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Ready to work with <span>OrangeTree AI</span>?</h2>
+    <p>Whether you need AI consulting, the AI SME Suite, or training for your team — start with a 30-minute conversation. No pitch deck, no commitment.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+      <a href="about.html" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);">About Us</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo-ai-white.svg" alt="OrangeTree.{ai}" style="height:34px;width:auto;margin-bottom:16px;">
+        <p>India's AI Training &amp; Consulting Company. Founded 2009 in Kolkata.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/orangetreeglobal" target="_blank" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.instagram.com/orangetreeglobal" target="_blank" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="ai-consulting.html">AI Consulting</a></li>
+          <li><a href="sme-suite.html">AI SME Suite</a></li>
+          <li><a href="training.html">Training Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="company-profile.html">Company Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@orangetreeglobal.com">info@orangetreeglobal.com</a></li>
+          <li><a href="https://www.linkedin.com/company/orangetreeglobal">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/orangetreeglobal">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OrangeTree Global. All rights reserved.</p>
+      <p>info@orangetreeglobal.com</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
